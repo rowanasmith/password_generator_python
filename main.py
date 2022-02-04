@@ -29,7 +29,13 @@ for number in range(0, nr_numbers):
   if len(final_numbers) < nr_numbers:
     final_numbers += numbers[random.randint(0, 9)]
 
-password = final_letters + final_symbols + final_numbers
-print(password)
+sorted_password = final_letters + final_symbols + final_numbers
+
+# print(sorted_password)
+
 #Hard Level - Order of characters randomised:
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
+
+shuffled_password = "".join(random.sample(sorted_password, len(sorted_password)))
+
+print(shuffled_password)
