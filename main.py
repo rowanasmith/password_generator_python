@@ -13,5 +13,23 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 #e.g. 4 letter, 2 symbol, 2 number = JduE&!91
 
 
+final_letters = ""
+final_symbols = ""
+final_numbers = ""
+
+for letter in range(0, nr_letters):
+  if len(final_letters) < nr_letters:
+    final_letters += letters[random.randint(0, 51)]
+
+for symbol in range(0, nr_symbols):
+  if len(final_symbols) < nr_symbols:
+    final_symbols += symbols[random.randint(0, 8)]
+
+for number in range(0, nr_numbers):
+  if len(final_numbers) < nr_numbers:
+    final_numbers += numbers[random.randint(0, 9)]
+
+password = final_letters + final_symbols + final_numbers
+print(password)
 #Hard Level - Order of characters randomised:
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
